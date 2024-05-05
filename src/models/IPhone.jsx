@@ -9,9 +9,10 @@ Title: Apple iPhone 15 Pro Max Black
 import { useEffect, useRef } from 'react'
 import { useGLTF, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
+import iPhoneScene from '../assets/3d/scene.glb'
 
-const Model = (props) => {
-  const { nodes, materials } = useGLTF('/models/scene.glb')
+const IPhone = (props) => {
+  const { nodes, materials } = useGLTF(iPhoneScene)
 
   const texture = useTexture(props.item.img)
 
@@ -256,5 +257,4 @@ const Model = (props) => {
   )
 }
 
-export default Model
-useGLTF.preload('/models/scene.glb')
+export default IPhone
